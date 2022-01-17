@@ -1,7 +1,7 @@
 ### Context
 
-# الاعجاز العددي في القرآن
-# The Miracle of Quran
+# الاعجاز العددي في القرآن و جساب الجمل
+# The Miracle of Quran and Alphabet Numerals
 Allah Said: (4:82) Then do they not reflect upon the Qur'an? If it had been from [any] other than Allah, they would have found within it much contradiction
 قال تعالى > أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ ۚ وَلَوْ كَانَ مِنْ عِندِ غَيْرِ اللَّهِ لَوَجَدُوا فِيهِ اخْتِلَافًا كَثِيرًا 82> سورة النساء
 
@@ -17,6 +17,8 @@ sources:
 2. [Quran Metadata from Tanzil Project](https://tanzil.net/docs/Tanzil_Project) 
 
 For more information about my dataset (generated_dataset folder) I have notebook that guides you step by step of how I created and developed this data and you can even create one by yourself. you can also see this in my kaggle [notebook for creating this dataset](https://www.kaggle.com/mohamedmoaz/building-numeric-quran-dataset)
+
+I followed [Noon Islamic Center Rules](http://www.islamnoon.com/Nashrat/kawaed.htm) for calculating Alphabet Numerals (حساب الجمل)
 
 ### Acknowledgements
 
