@@ -18,6 +18,7 @@ sources:
 
 For more information about my dataset (generated_dataset folder) I have notebook that guides you step by step of how I created and developed this data and you can even create one by yourself. you can also see this in my kaggle [notebook for creating this dataset](https://www.kaggle.com/mohamedmoaz/building-numeric-quran-dataset)
 
+for more information and description about the data columns see [my dataset on kaggle](https://www.kaggle.com/mohamedmoaz/numeric-quran)
 I followed [Noon Islamic Center Rules](http://www.islamnoon.com/Nashrat/kawaed.htm) for calculating Alphabet Numerals (حساب الجمل)
 
 ### Acknowledgements
