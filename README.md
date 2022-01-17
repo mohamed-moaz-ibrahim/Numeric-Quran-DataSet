@@ -16,7 +16,7 @@ sources:
 1. [The King Fahd Glorious Qur’an Printing Complex](https://dm.qurancomplex.gov.sa/en/projectabstract/)
 2. [Quran Metadata from Tanzil Project](https://tanzil.net/docs/Tanzil_Project) 
 
-For more information about my dataset ( find it in the generated dataset folder ) I have notebook that guides you step by step of how I created and developed this data and you can even create one by yourself. [notebook for creating this dataset](https://www.kaggle.com/mohamedmoaz/building-numeric-quran-dataset)
+For more information about my dataset (generated_dataset folder) I have notebook that guides you step by step of how I created and developed this data and you can even create one by yourself. you can also see this in my kaggle [notebook for creating this dataset](https://www.kaggle.com/mohamedmoaz/building-numeric-quran-dataset)
 
 ### Acknowledgements
 
