@@ -1,0 +1,542 @@
+{
+  "title": "The Quran and it's Numeric Miracles",
+  "subtitle":"حساب الجمّل و الاعجاز العددي في القران الكريم",
+  "description": "### Context\n\n# الاعجاز العددي في القرآن و حساب الجمل\n# The Miracle of Quran and Alphabet Numerals\nAllah Said: (4:82) Then do they not reflect upon the Qur'an? If it had been from [any] other than Allah, they would have found within it much contradiction\nقال تعالى &gt; أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ ۚ وَلَوْ كَانَ مِنْ عِندِ غَيْرِ اللَّهِ لَوَجَدُوا فِيهِ اخْتِلَافًا كَثِيرًا 82&gt; سورة النساء\n\nFor the last twenty years or more, different scholars, such as Abderrazzaq Nufal, Bassám Jarrar, Abdu A-Daim Kuhail, among others, have studied the miracle of numbers of the Holy Quran. The truth is that the use of computers and statistics programs have made this task much easier, leading to the acknowledgment of the miracle of numbers in the Quran. These results speak for themselves, the numbers don't lie, and show the divine origin of this Sacred Text\n\nI hope you use this dataset to dig deeper and find your way to yet another astonishing number miracle of The Quran.\n\n### Content\n\nFor the sensitive nature of this dataset and the work that really depend on the percise of the digtal text of Quran I only use a well know sources and highly accurate text of Hafs narration of Quran. \nsources:\n1. [The King Fahd Glorious Qur’an Printing Complex](https://dm.qurancomplex.gov.sa/en/projectabstract/)\n2. [Quran Metadata from Tanzil Project](https://tanzil.net/docs/Tanzil_Project) \n\nI followed [Noon Islamic Center Rules](http://www.islamnoon.com/Nashrat/kawaed.htm) for calculating Alphabet Numerals (حساب الجمل)\n\nFor more information about my dataset I have notebook that guides you step by step of how I created and developed this data and you can even create one by yourself. [notebook for creating this dataset](https://www.kaggle.com/mohamedmoaz/building-numeric-quran-dataset)\n\n### Acknowledgements\n\nI really wouldn't be interested in The numeric miracles of Quran without the effort of [Noon Islamic Center](http://www.islamnoon.com/) and [sheikh Bassam Jarrar](https://www.youtube.com/channel/UCeM3H72v5rzf_4J5aZV8BmQ)\nso all thanks goes to them and their [Youtube channel](https://www.youtube.com/channel/UCeM3H72v5rzf_4J5aZV8BmQ)\n\n### Inspiration\n\nWe are in the digital era and we are just in the begging of findings of Numerals Miracle in Quran so do your best and find your own questions and answers. Here are some question to help you start\n\nCould you find any new number Miracle?\nWhat are the patterns of numbers and their colorations?\n\n ",
+  "id":"mohamedmoaz/numeric-quran",
+  "version": "3.0.0",
+  "contributors": [
+    {
+      "title": "Mohamed Moaz",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+        "name": "Attribution 4.0 International (CC BY 4.0)"
+    }
+],
+  "keywords": [
+    "Quran","The Quran", "Holey Quran", "Numeric Quran", "Quran Numerals", "Quran Miracles", "Quran Numeric Miracles",
+    "القرآن","القران", "القرآن الكريم", "اقرآن العددي", "الاعجاز العددي في القرآن", "القرآن المعجز", "القران و حساب الجمل","حساب الجمّل في القران الكريم",
+    "text data" , "religion and belief systems"
+  ],
+  "resources": [
+    {
+      "path": "quran_Hafs_numeric_features.csv",
+      "description": "# Quran with Alphabet Numerals or Jomal ( القرآن و حساب الجمل) this file has all Ayas or Verses of Quran (Hafs narration) and its Alphabet Numerals",
+      "schema": {
+        "fields": [
+          {
+            "name": "sura_name",
+            "title":"اسم السورة",
+            "type": "string"
+          },
+          {
+            "name": "sura_mushaf_order",
+            "title":"ترتيب السورة حسب المصحف",
+            "type": "integer"
+          },
+          {
+            "name": "sura_revel_order",
+            "title":"ترتيب السورة حسب النزول",
+            "type": "integer"
+          },
+          {
+            "name": "sura_revel_place",
+            "title":"مكان نزول السورة",
+            "type": "string"
+          },
+          {
+            "name": "sura_cumulative_mushaf_order",
+            "title":"ترتيب السورة التراكمي حسب ترتيب المصحف. الترتيب التراكمي هو مجموع ترتيب السور السابقة مضافا له ترتيب السورة الحالية",
+            "type": "integer"
+          },
+          {
+            "name": "sura_cumulative_revel_order",
+            "title":"ترتيب السورة التراكمي حسب زمن النزول. الترتيب التراكمي هو مجموع ترتيب السور السابقة مضافا له ترتيب السورة الحالية",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_letters",
+            "title":"احرف اسم السورة",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_letters_count",
+            "title":"عدد احرف اسم السورة",
+            "type": "integer"
+          },
+          {
+            "name": "invariant_sura_name_letters",
+            "title":"الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_invariant_letters_count",
+            "title":"عدد احرف اسم السورة الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_jomal",
+            "title":"جمّل اسم السورة",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_cumulative_jomal",
+            "title":"جمّل اسم السورة تراكمي. الحساب التراكمي هو جمّل اسم السورة مضافا له جمّل ما قبله من السور",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_letters",
+            "title":"احرف اسم السورة من دون تكرار",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_unique_letters_count",
+            "title":"عدد احرف اسم السورة من دون تكرار",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_invariant_letters",
+            "title":"احرف اسم السورة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_unique_invariant_letters_count",
+            "title":"عدد احرف اسم السورة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_letters_jomal",
+            "title":"جمّل اسم السورة من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_letters_cumulative_jomal",
+            "title":"جمّل اسم السورة تراكمي من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "aya_index",
+            "title":"ترتيب الآية في المصحف",
+            "type": "integer"
+          },
+          {
+            "name": "aya_no",
+            "title":"ترتيب الآية في السورة",
+            "type": "integer"
+          },
+          {
+            "name": "aya_text",
+            "title":"نص الآية",
+            "type": "string"
+          },
+          {
+            "name": "aya_words",
+            "title":"كلمات الآية",
+            "type": "string"
+          },
+          {
+            "name": "aya_words_count",
+            "title":"عدد كلمات الآية",
+            "type": "integer"
+          },
+          {
+            "name": "aya_letters",
+            "title":"احرف الآية",
+            "type": "string"
+          },
+          {
+            "name": "aya_letters_count",
+            "title":"عدد احرف الآية",
+            "type": "integer"
+          },
+          {
+            "name": "aya_invariant_letters",
+            "title":"احرف الآية الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "aya_invariant_letters_count",
+            "title":"عدد احرف الآية الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "aya_jomal",
+            "title":"جمّل الآية",
+            "type": "integer"
+          },
+          {
+            "name": "aya_cumulative_jomal",
+            "title":"جمّل الآية تراكمي",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_letters",
+            "title":"احرف الآية من دون تكرار",
+            "type": "string"
+          },
+          {
+            "name": "aya_unique_letters_count",
+            "title":"عدد احرف الآية من دون تكرار",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_invariant_letters",
+            "title":"احرف الآية الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "aya_unique_invariant_letters_count",
+            "title":"عدد احرف الآية الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_letters_jomal",
+            "title":"جمّل الآية من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_letters_commulative_jomal",
+            "title":"جمّل الآية التراكمي من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_text",
+            "title":"نص الآية الإملائي او كما تُقرأ. نص الآية كما تُقرأ و نص الآية هو مثلا نجد في المصحف في سورة الفاتحه كلمة (ملك يوم الدين) في حين تقرأ (مالك يوم الدين) و هكذا في كل المصحف",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_words",
+            "title":"كلمات الآية المقروءة",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_words_count",
+            "title":"عدد كلمات الآية المقروءة",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_letters",
+            "title":"احرف الآية المقروءة",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_letters_count",
+            "title":"عدد احرف الآية المقروءة",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_invariant_letters",
+            "title":"احرف الآية المقروءة الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_invariant_letters_count",
+            "title":"عدد احرف الآية المقروءة الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_jomal",
+            "title":"جمّل الآية المقروءة" ,
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_cumulative_jomal",
+            "title":"جمّل الآية المقروءة تراكمي",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_letters",
+            "title":"احرف الآية المقروءة من دون تكرار",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_unique_letters_count",
+            "title":"عدد احرف الآية المقروءة من دون تكرار",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_invariant_letters",
+            "title":"احرف الآية المقروءة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_unique_invariant_letters_count",
+            "title":"عدد احرف الآية المقروءة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_letters_jomal",
+            "title":"جمّل الآية المقروءة من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_letters_commulative_jomal",
+            "title":"جمّل الآية المقروءة التراكمي من دون تكرار الحروف",
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "path": "quran_Hafs_numeric_features.xlsx",
+      "description": "# Quran with Alphabet Numerals or Jomal ( القرآن و حساب الجمل) this file has all Ayas or Verses of Quran (Hafs narration) and its Alphabet Numerals",
+      "schema": {
+        "fields": [
+          {
+            "name": "sura_name",
+            "title":"اسم السورة",
+            "type": "string"
+          },
+          {
+            "name": "sura_mushaf_order",
+            "title":"ترتيب السورة حسب المصحف",
+            "type": "integer"
+          },
+          {
+            "name": "sura_revel_order",
+            "title":"ترتيب السورة حسب النزول",
+            "type": "integer"
+          },
+          {
+            "name": "sura_revel_place",
+            "title":"مكان نزول السورة",
+            "type": "string"
+          },
+          {
+            "name": "sura_cumulative_mushaf_order",
+            "title":"ترتيب السورة التراكمي حسب ترتيب المصحف. الترتيب التراكمي هو مجموع ترتيب السور السابقة مضافا له ترتيب السورة الحالية",
+            "type": "integer"
+          },
+          {
+            "name": "sura_cumulative_revel_order",
+            "title":"ترتيب السورة التراكمي حسب زمن النزول. الترتيب التراكمي هو مجموع ترتيب السور السابقة مضافا له ترتيب السورة الحالية",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_letters",
+            "title":"احرف اسم السورة",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_letters_count",
+            "title":"عدد احرف اسم السورة",
+            "type": "integer"
+          },
+          {
+            "name": "invariant_sura_name_letters",
+            "title":"الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_invariant_letters_count",
+            "title":"عدد احرف اسم السورة الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_jomal",
+            "title":"جمّل اسم السورة",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_cumulative_jomal",
+            "title":"جمّل اسم السورة تراكمي. الحساب التراكمي هو جمّل اسم السورة مضافا له جمّل ما قبله من السور",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_letters",
+            "title":"احرف اسم السورة من دون تكرار",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_unique_letters_count",
+            "title":"عدد احرف اسم السورة من دون تكرار",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_invariant_letters",
+            "title":"احرف اسم السورة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "sura_name_unique_invariant_letters_count",
+            "title":"عدد احرف اسم السورة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_letters_jomal",
+            "title":"جمّل اسم السورة من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "sura_name_unique_letters_cumulative_jomal",
+            "title":"جمّل اسم السورة تراكمي من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "aya_index",
+            "title":"ترتيب الآية في المصحف",
+            "type": "integer"
+          },
+          {
+            "name": "aya_no",
+            "title":"ترتيب الآية في السورة",
+            "type": "integer"
+          },
+          {
+            "name": "aya_text",
+            "title":"نص الآية",
+            "type": "string"
+          },
+          {
+            "name": "aya_words",
+            "title":"كلمات الآية",
+            "type": "string"
+          },
+          {
+            "name": "aya_words_count",
+            "title":"عدد كلمات الآية",
+            "type": "integer"
+          },
+          {
+            "name": "aya_letters",
+            "title":"احرف الآية",
+            "type": "string"
+          },
+          {
+            "name": "aya_letters_count",
+            "title":"عدد احرف الآية",
+            "type": "integer"
+          },
+          {
+            "name": "aya_invariant_letters",
+            "title":"احرف الآية الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "aya_invariant_letters_count",
+            "title":"عدد احرف الآية الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "aya_jomal",
+            "title":"جمّل الآية",
+            "type": "integer"
+          },
+          {
+            "name": "aya_cumulative_jomal",
+            "title":"جمّل الآية تراكمي",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_letters",
+            "title":"احرف الآية من دون تكرار",
+            "type": "string"
+          },
+          {
+            "name": "aya_unique_letters_count",
+            "title":"عدد احرف الآية من دون تكرار",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_invariant_letters",
+            "title":"احرف الآية الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "aya_unique_invariant_letters_count",
+            "title":"عدد احرف الآية الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_letters_jomal",
+            "title":"جمّل الآية من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "aya_unique_letters_commulative_jomal",
+            "title":"جمّل الآية التراكمي من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_text",
+            "title":"نص الآية الإملائي او كما تُقرأ. نص الآية كما تُقرأ و نص الآية هو مثلا نجد في المصحف في سورة الفاتحه كلمة (ملك يوم الدين) في حين تقرأ (مالك يوم الدين) و هكذا في كل المصحف",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_words",
+            "title":"كلمات الآية المقروءة",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_words_count",
+            "title":"عدد كلمات الآية المقروءة",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_letters",
+            "title":"احرف الآية المقروءة",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_letters_count",
+            "title":"عدد احرف الآية المقروءة",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_invariant_letters",
+            "title":"احرف الآية المقروءة الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_invariant_letters_count",
+            "title":"عدد احرف الآية المقروءة الثابتة. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_jomal",
+            "title":"جمّل الآية المقروءة" ,
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_cumulative_jomal",
+            "title":"جمّل الآية المقروءة تراكمي",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_letters",
+            "title":"احرف الآية المقروءة من دون تكرار",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_unique_letters_count",
+            "title":"عدد احرف الآية المقروءة من دون تكرار",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_invariant_letters",
+            "title":"احرف الآية المقروءة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "string"
+          },
+          {
+            "name": "spoken_aya_unique_invariant_letters_count",
+            "title":"عدد احرف الآية المقروءة الثابتة من دون تكرار. الاحرف الثابتة هي التي لا تتغير بتغير شكل الحرف مثلا يتم اعتبار (ة) هي (ت) و كذلك (أ ا إ آ ء) كلهم (ا)",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_letters_jomal",
+            "title":"جمّل الآية المقروءة من دون تكرار الحروف",
+            "type": "integer"
+          },
+          {
+            "name": "spoken_aya_unique_letters_commulative_jomal",
+            "title":"جمّل الآية المقروءة التراكمي من دون تكرار الحروف",
+            "type": "integer"
+          }
+        ]
+      }
+      
+    }
+  ]
+}
